@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Keuangan Digital</title>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head><body>
+<div id="boot"><div class="spin" role="status" aria-label="Memuat"></div></div>
+<div id="login" hidden><div class="cd dn"><i class="bi bi-wallet2" style="font-size:2rem;color:var(--pr)"></i><h1>Keuangan Digital</h1><p class="sb" id="lm">Masuk dengan akun Google yang terdaftar.</p><div id="gbtn" style="display:flex;justify-content:center;margin-top:1rem"></div></div></div>
+<div id="denied" hidden><div class="cd dn"><i class="bi bi-lock-fill" style="font-size:2rem;color:#991B1B"></i><h1>Akses Ditolak (403)</h1>
+<p class="sb">Akun Google Anda tidak memiliki hak akses ke aplikasi ini.</p><div id="dm" style="margin:1rem 0"></div>
+<div class="act" style="justify-content:center"><button class="btn" onclick="logout()">Ganti Akun Google</button><button class="btn p" onclick="load()">Coba Lagi</button></div></div></div>
+<div id="app" hidden>
+<aside id="side"><div class="brand"><i class="bi bi-wallet2"></i><span id="bn">Keuangan Digital</span></div><nav id="nav" aria-label="Menu utama"></nav><div class="ub" id="ub"></div></aside>
+<div id="scrim" onclick="document.body.classList.remove('nv')"></div>
+<main><header class="top"><button id="burger" aria-label="Buka menu" onclick="document.body.classList.add('nv')"><i class="bi bi-list"></i></button><h1 id="ttl"></h1><div class="sp"></div>
+<button class="btn p" onclick="txModal()"><i class="bi bi-plus-lg"></i><span>Catat Transaksi</span></button></header>
+<div id="view"></div></main></div>
+<div id="mod" hidden></div><div id="toast" aria-live="polite"></div>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+</body></html>
