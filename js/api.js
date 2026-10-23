@@ -17,5 +17,5 @@ function onAuthFail(m){setTok(null);showLogin(m)}
 function showLogin(m){$('#boot').hidden=true;$('#app').hidden=true;$('#denied').hidden=true;$('#login').hidden=false;
   $('#lm').textContent=/ISI_/.test(GOOGLE_CLIENT_ID)?'Isi GOOGLE_CLIENT_ID di js/config.js terlebih dahulu.':(m||'Masuk dengan akun Google yang terdaftar.');
   try{google.accounts.id.renderButton($('#gbtn'),{theme:'outline',size:'large',text:'signin_with',shape:'pill',locale:'id'});google.accounts.id.prompt()}catch(e){}}
-function logout(){try{google.accounts.id.disableAutoSelect()}catch(e){}setTok(null);try{localStorage.removeItem('kd2')}catch(e){}D=null;U=null;showLogin()}
+function logout(){try{google.accounts.id.disableAutoSelect()}catch(e){}setTok(null);try{localStorage.removeItem('kd2')}catch(e){}D=null;U=null;H='';RV={};clearTimeout(st);showLogin()}
 function authReady(cb,n){n=n||0;if(window.google&&google.accounts&&google.accounts.id)return cb();if(n>200)return deny('Terjadi Kesalahan','Gagal memuat Google Sign-In. Periksa koneksi internet.');setTimeout(()=>authReady(cb,n+1),50)}

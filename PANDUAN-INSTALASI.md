@@ -57,3 +57,10 @@ Repo → **Settings → Pages** → Source **Deploy from a branch** → Branch *
 | "Token tidak valid untuk aplikasi ini" | Client ID di Kode.gs berbeda dengan config.js | Samakan keduanya, deploy New version |
 | "Gagal terhubung ke server" / CORS | Deploy bukan "Anyone", atau belum New version | Periksa Deploy → Manage deployments |
 | Situs 404 di GitHub Pages | `index.html` tidak di root repo | Push ulang dari folder `keuangan-digital` |
+
+## Upgrade kecepatan (v2.1) — langkah update
+1. **Backend:** ganti seluruh isi `Kode.gs` di editor Apps Script dengan versi baru (isi lagi `GOOGLE_CLIENT_ID` di baris atas).
+2. Pilih fungsi **pasangWarmUp** → ▶ Run (**sekali saja**; memasang pemanasan cache tiap 10 menit).
+3. **Deploy → Manage deployments → ikon pensil → Version: New version → Deploy** (URL `/exec` tetap).
+4. **Frontend:** ekstrak ZIP baru, salin `js/config.js` lama Anda (sudah berisi URL & Client ID) menimpa yang baru, lalu di folder `keuangan-digital`: `git add .` → `git commit -m "Upgrade kecepatan"` → `git push`.
+5. Buka situs, tekan **Ctrl+Shift+R** sekali. (Service worker menyajikan versi tersimpan dulu, jadi setelah setiap update buka situs dua kali.)

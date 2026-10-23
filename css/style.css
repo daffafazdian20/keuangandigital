@@ -17,7 +17,7 @@ button{font:inherit;cursor:pointer;color:inherit;background:none;border:0}:focus
 main{margin-left:260px;min-height:100vh}
 .top{position:sticky;top:0;z-index:20;background:rgba(244,246,248,.92);backdrop-filter:blur(6px);display:flex;align-items:center;gap:1rem;padding:1rem 2rem;border-bottom:1px solid var(--bd)}
 #burger{display:none;width:44px;height:44px;font-size:1.5rem}.sp{flex:1}
-#view{padding:2rem}.sec{display:none}.sec.on{display:block;animation:fi .15s}@keyframes fi{from{opacity:.4}to{opacity:1}}
+#view{padding:2rem}.sec{display:none}.sec.on{display:block}@keyframes fi{from{opacity:.4}to{opacity:1}}
 .g{display:grid;grid-template-columns:repeat(12,1fr);gap:1.5rem;margin-bottom:1.5rem}.c4{grid-column:span 4}.c6{grid-column:span 6}.c8{grid-column:span 8}.c12{grid-column:span 12}
 .cd{background:#fff;border:1px solid var(--bd);border-radius:16px;padding:20px;box-shadow:var(--sh);min-width:0}
 .ch{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;gap:.5rem}
